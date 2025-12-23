@@ -5,6 +5,20 @@ In this project, we introduce the use of Physics-Informed Neural Networks (PINNs
 
 By incorporating the governing differential equations of motion directly into the loss function, the PINN framework ensures compliance with physical laws while leveraging the approximation capabilities of deep neural networks. 
 
+This repository contains PyTorch implementations of Physics-Informed Neural Networks (PINNs) for:
+- **Forward modeling** of an underdamped single-degree-of-freedom (SDOF) free-vibration system.
+- **Inverse modeling** (parameter identification) to estimate **ω** from noisy displacement observations.
+- **Scaled forward modeling** using an ansatz with learnable sinusoidal modulation to handle higher frequencies (ω = 80).
+
+## Governing equation
+\[
+u''(t) + 2\xi\omega u'(t) + \omega^2 u(t) = 0
+\]
+with initial conditions:
+\[
+u(0)=u_0,\quad u'(0)=v_0
+\]
+
 This work has been presented at the 4th International Conference on Sustainable Development in Civil Engineering, 2025. For citation, refer to the following:
 ## Citation
 
@@ -18,4 +32,5 @@ This work has been presented at the 4th International Conference on Sustainable 
   publisher = {Mehran University of Engineering \& Technology, Jamshoro},
   note      = {Conference abstract}
 }
+
 
