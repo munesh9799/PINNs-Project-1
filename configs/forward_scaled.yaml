@@ -1,0 +1,33 @@
+experiment:
+  name: forward_scaled
+  results_dir: results/forward_scaled
+
+seed: 123
+device: cpu
+
+model:
+  n_hidden: 32
+  n_layers: 3
+
+data:
+  t0: 0.0
+  t1: 1.0
+  n_physics: 60
+  n_test: 300
+
+sdof:
+  omega: 80.0
+  xi: 0.05
+  u0: 1.0
+  v0: 0.1
+
+ansatz:
+  a_init: 70.0
+  b_init: 1.0
+
+train:
+  steps: 15001
+  lr: 1.0e-3
+  lambda1: 1.0e-1
+  lambda2: 1.0e-4
+  plot_every: 5000
